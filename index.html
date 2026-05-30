@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANUAL TÉCNICO DEL AZUFRE MEDICINAL — Instrucciones de los Antiguos Sabios</title>
+    <style>
+        :root {
+            --parchment: #fdf6e3;
+            --parchment-dark: #f5e6c8;
+            --sulfur: #e8b84b;
+            --sulfur-light: #f7d77c;
+            --sulfur-dark: #b8860b;
+            --text: #3b2f1e;
+            --text-light: #5a4a32;
+            --heading: #6b3a1f;
+            --accent: #8b4513;
+            --accent-red: #a0522d;
+            --border: #c4a265;
+            --card-bg: #fef9f0;
+            --highlight: #fff8e7;
+            --shadow: 0 4px 20px rgba(80, 40, 10, 0.15);
+            --roman-red: #8b1a1a;
+            --egyptian-gold: #c4963d;
+            --chinese-red: #b33a2e;
+            --indian-orange: #c4743f;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+            background-color: #e8dcc8;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4c5a0' fill-opacity='0.4'%3E%3Cpath d='M0 20 L20 0 L40 20 L20 40 Z'/%3E%3C/g%3E%3C/svg%3E");
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes glowPulse { 0%,100% { text-shadow: 0 0 20px rgba(232,184,75,0.6); } 50% { text-shadow: 0 0 40px rgba(232,184,75,1), 0 0 80px rgba(200,140,30,0.5); } }
+        @keyframes subtleFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+        .fade-in { animation: fadeUp 0.8s ease-out forwards; }
+        .fade-in-delay-1 { animation: fadeUp 0.8s ease-out 0.15s forwards; opacity: 0; }
+        .fade-in-delay-2 { animation: fadeUp 0.8s ease-out 0.3s forwards; opacity: 0; }
+        .fade-in-delay-3 { animation: fadeUp 0.8s ease-out 0.45s forwards; opacity: 0; }
+        .top-nav { background: linear-gradient(180deg, #2c1810 0%, #3e2216 100%); color: #f0d9a0; padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.5); border-bottom: 3px solid var(--sulfur-dark); }
+        .top-nav-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-wrap: wrap; }
+        .nav-brand { font-family: 'Georgia', serif; font-size: 1rem; font-weight: bold; color: var(--sulfur-light); letter-spacing: 2px; padding: 12px 0; white-space: nowrap; text-transform: uppercase; }
+        .nav-brand .sulfur-icon { display: inline-block; font-size: 1.4rem; vertical-align: middle; margin-right: 6px; animation: glowPulse 3s ease-in-out infinite; }
+        .nav-links { display: flex; gap: 6px; flex-wrap: wrap; padding: 8px 0; }
+        .nav-links a { color: #d4b87a; text-decoration: none; padding: 6px 13px; border-radius: 4px; font-size: 0.85rem; letter-spacing: 1px; transition: all 0.3s; white-space: nowrap; border: 1px solid transparent; }
+        .nav-links a:hover { background: rgba(232,184,75,0.15); border-color: var(--sulfur); color: #fff; }
+        .nav-links a.active-link { background: rgba(232,184,75,0.2); border-color: var(--sulfur); color: #fff; }
+        .main-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .hero { background: linear-gradient(180deg, rgba(40,20,8,0.85) 0%, rgba(60,30,12,0.7) 100%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='%23c4963d' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E"); background-color: #2c1810; color: #fdf6e3; text-align: center; padding: 60px 30px 50px; margin: 30px 0 10px; border-radius: 8px; border: 2px solid var(--sulfur-dark); box-shadow: var(--shadow), inset 0 0 80px rgba(200,140,30,0.08); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at center, rgba(232,184,75,0.08) 0%, transparent 70%); animation: glowPulse 6s ease-in-out infinite; pointer-events: none; }
+        .hero .icon-main { font-size: 5rem; display: block; animation: subtleFloat 3s ease-in-out infinite; }
+        .hero h1 { font-family: 'Georgia', serif; font-size: 3rem; letter-spacing: 3px; margin: 10px 0; color: #f7d77c; position: relative; z-index: 1; }
+        .hero .subtitle { font-style: italic; font-size: 1.2rem; color: #e0c88e; letter-spacing: 1px; position: relative; z-index: 1; }
+        .hero .meta-line { margin-top: 15px; font-size: 0.9rem; color: #b8956e; letter-spacing: 1px; position: relative; z-index: 1; }
+        .hero .decorative-line { width: 120px; height: 2px; background: linear-gradient(90deg, transparent, var(--sulfur), transparent); margin: 20px auto; position: relative; z-index: 1; }
+        .intro-box { background: var(--card-bg); border: 1px solid var(--border); border-left: 5px solid var(--sulfur-dark); border-radius: 6px; padding: 28px 30px; margin: 30px 0; font-style: italic; color: var(--text-light); box-shadow: var(--shadow); position: relative; }
+        .intro-box::before { content: '⚠'; position: absolute; top: -16px; left: 20px; font-size: 1.8rem; background: var(--card-bg); padding: 0 8px; color: var(--accent-red); font-style: normal; }
+        .intro-box strong { color: var(--accent-red); font-style: normal; }
+        .chapter { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; margin: 40px 0; padding: 35px 30px; box-shadow: var(--shadow); position: relative; scroll-margin-top: 100px; }
+        .chapter h2 { font-family: 'Georgia', serif; font-size: 1.8rem; color: var(--heading); border-bottom: 2px solid var(--sulfur); padding-bottom: 10px; margin-bottom: 20px; letter-spacing: 1px; }
+        .chapter .culture-badge { display: inline-block; background: var(--sulfur-dark); color: #fff; padding: 4px 14px; border-radius: 3px; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 18px; }
+        .chapter h3 { font-size: 1.2rem; color: #5c2d0e; margin: 25px 0 12px; letter-spacing: 1px; border-left: 3px solid var(--sulfur); padding-left: 12px; }
+        .chapter h4 { color: #6b3a1f; margin: 15px 0 8px; font-style: italic; }
+        .recipe-card { background: #fefcf7; border: 1px dashed #c4a265; border-radius: 6px; padding: 20px 24px; margin: 18px 0; }
+        .recipe-card .recipe-title { font-weight: bold; font-size: 1.05rem; color: #6b3a1f; margin-bottom: 10px; }
+        .recipe-card ul { list-style: none; padding-left: 0; }
+        .recipe-card ul li { padding: 4px 0 4px 28px; position: relative; }
+        .recipe-card ul li::before { content: '◆'; position: absolute; left: 4px; color: var(--sulfur-dark); font-size: 0.7rem; top: 6px; }
+        .dose-highlight { background: #fff8e0; border: 1px solid #e8c860; padding: 3px 8px; border-radius: 3px; font-weight: bold; white-space: nowrap; }
+        .warning-inline { color: var(--roman-red); font-weight: bold; }
+        .table-container { overflow-x: auto; margin: 25px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 600px; }
+        table th { background: #3e2216; color: #f0d9a0; padding: 12px 14px; letter-spacing: 1px; font-weight: normal; text-align: left; }
+        table td { padding: 10px 14px; border-bottom: 1px solid #d4c5a0; vertical-align: top; }
+        table tr:nth-child(even) td { background: #fdf8f0; }
+        table tr:hover td { background: #fff8e0; }
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 20px 0; }
+        .method-card { background: #fefcf7; border: 1px solid var(--border); border-radius: 6px; padding: 20px; text-align: center; transition: all 0.3s; }
+        .method-card:hover { box-shadow: 0 6px 25px rgba(80,40,10,0.2); transform: translateY(-3px); border-color: var(--sulfur); }
+        .method-card .method-number { display: inline-block; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; background: var(--sulfur-dark); color: #fff; font-weight: bold; margin-bottom: 10px; }
+        .method-card h4 { margin: 8px 0; color: #5c2d0e; }
+        .method-card p { font-size: 0.85rem; color: #5a4a32; line-height: 1.6; }
+        .ancient-quote { background: linear-gradient(135deg, #fdf6e3 0%, #fef9f0 100%); border-left: 4px solid var(--sulfur-dark); padding: 18px 24px; margin: 20px 0; font-style: italic; color: #5a3a1e; border-radius: 0 6px 6px 0; }
+        .ancient-quote::before { content: '«'; font-size: 2rem; color: var(--sulfur-dark); line-height: 0; vertical-align: -8px; margin-right: 4px; }
+        .ancient-quote .attribution { display: block; text-align: right; font-style: normal; font-weight: bold; color: #8b5a2b; margin-top: 8px; font-size: 0.85rem; }
+        .site-footer { background: #2c1810; color: #b8956e; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 4px solid var(--sulfur-dark); font-size: 0.9rem; letter-spacing: 1px; }
+        .site-footer .footer-icon { font-size: 2rem; display: block; margin-bottom: 8px; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; background: var(--sulfur-dark); color: #fff; width: 44px; height: 44px; border-radius: 50%; text-align: center; line-height: 44px; font-size: 1.3rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; transition: all 0.3s; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .back-to-top:hover { background: #9a5f0a; transform: translateY(-3px); }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .chapter { padding: 20px 16px; margin: 25px 0; }
+            .top-nav-inner { flex-direction: column; align-items: center; padding: 8px 10px; }
+            .nav-links { gap: 3px; justify-content: center; }
+            .nav-links a { font-size: 0.7rem; padding: 5px 8px; }
+            .method-grid { grid-template-columns: 1fr; }
+            table { font-size: 0.7rem; }
+        }
+        @media print {
+            body { background: #fff; color: #000; }
+            .top-nav, .back-to-top, .site-footer { display: none; }
+            .chapter { break-inside: avoid; box-shadow: none; border: 1px solid #999; }
+            .hero { background: #fff; color: #000; border: 2px solid #000; }
+            .hero h1 { color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav" id="top">
+    <div class="top-nav-inner">
+        <div class="nav-brand"><span class="sulfur-icon">🜂</span> AZUFRE MEDICINAL</div>
+        <div class="nav-links">
+            <a href="#mesopotamia">Mesopotamia</a>
+            <a href="#egipto">Egipto</a>
+            <a href="#greciaroma">Grecia &amp; Roma</a>
+            <a href="#india">India</a>
+            <a href="#china">China</a>
+            <a href="#america">América</a>
+            <a href="#tabla">Tabla</a>
+            <a href="#metodos">Métodos</a>
+        </div>
+    </div>
+</nav>
+
+<div class="main-container">
+
+    <header class="hero fade-in">
+        <span class="icon-main">🜂</span>
+        <h1>MANUAL TÉCNICO DEL<br>AZUFRE MEDICINAL</h1>
+        <p class="subtitle">Instrucciones de suministro según los antiguos sabios y culturas</p>
+        <div class="decorative-line"></div>
+        <p class="meta-line">📜 Compilado a partir de: Papiro de Ebers · Dioscórides · Plinio el Viejo · Charaka Samhita · Rasa Ratna Samuchaya · Shennong Bencao Jing · Bencao Gangmu · Códice Florentino</p>
+    </header>
+
+    <div class="intro-box fade-in-delay-1">
+        <p><strong>Prefacio necesario:</strong> Las fórmulas aquí descritas son <strong>reproducciones históricas</strong> con fines de estudio antropológico y farmacognóstico. Muchas implican la ingestión de compuestos sulfurados que, sin el procesamiento tradicional exacto, son altamente tóxicas. <strong>No deben replicarse sin supervisión experta.</strong> Los sabios antiguos insistían en que el azufre debía ser siempre <em>purificado</em> y administrado en dosis exactas; el veneno y la medicina se diferenciaban por el método.</p>
+    </div>
+
+    <section class="chapter fade-in-delay-1" id="mesopotamia">
+        <span class="culture-badge">🜂 MESOPOTAMIA</span>
+        <h2>Capítulo 1 — Fumigaciones y ungüentos de los médicos Asu y Ashipu</h2>
+        <p><strong>Fuentes:</strong> Tablillas cuneiformes de la biblioteca de Asurbanipal, series terapéuticas como <em>«Šumma amēlu muḫḫašu umma ukāl»</em>.</p>
+        <p><strong>Indicación principal:</strong> Eliminar el «dedo del demonio» (enfermedades cutáneas) y purificar moradas.</p>
+        <h3>1. Fumigante purificador de habitación <em>(Bīt rimki)</em></h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🔮 Fumigación ritual</p>
+            <ul>
+                <li><strong>Material:</strong> Azufre nativo en bruto <em>(kibrītu)</em>, recogido de fuentes termales.</li>
+                <li><strong>Preparación:</strong> Colocar un disco de azufre sobre brasas de carbón de madera de tamarisco en un pebetero de arcilla.</li>
+                <li><strong>Suministro:</strong> Cerrar la habitación del enfermo. Recitar la invocación a Gula mientras el humo llena el espacio. Exponer durante <span class="dose-highlight">20-30 minutos</span>. Ventilar después.</li>
+                <li><strong>Uso con paciente:</strong> En afecciones pulmonares, el enfermo se sentaba envuelto en un manto de lana sobre el pebetero, inhalando el vapor a través de un tubo de caña hueca para «toser el mal».</li>
+            </ul>
+        </div>
+        <h3>2. Ungüento contra la sarna <em>(epqu)</em></h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🧴 Ungüento cutáneo</p>
+            <ul>
+                <li><strong>Composición:</strong> <span class="dose-highlight">1 siclo (≈ 8.3 g)</span> de azufre pulverizado, <span class="dose-highlight">2 siclos</span> de aceite de cedro, <span class="dose-highlight">1 siclo</span> de resina de lentisco.</li>
+                <li><strong>Elaboración:</strong> Moler el azufre en mortero de basalto hasta polvo impalpable. Calentar el aceite de cedro y disolver la resina. Retirar del fuego e incorporar el azufre agitando hasta pasta homogénea.</li>
+                <li><strong>Aplicación:</strong> Untar capa fina sobre piel afectada al anochecer. Cubrir con paño de lino. A la mañana siguiente, lavar con decocción de hojas de palmera datilera. <strong>Repetir 3 noches.</strong></li>
+            </ul>
+        </div>
+        <div class="ancient-quote">La piel se desprenderá como escama de pez y vendrá la cura.<span class="attribution">— Tablilla médica asiria, serie Šumma amēlu</span></div>
+    </section>
+
+    <section class="chapter fade-in-delay-2" id="egipto">
+        <span class="culture-badge">☥ ANTIGUO EGIPTO</span>
+        <h2>Capítulo 2 — Fórmulas del Papiro de Ebers (1550 a.C.)</h2>
+        <p><strong>Fuente:</strong> Columnas 56, 60 y 94 del Papiro de Ebers. Los médicos <em>swnw</em> egipcios usaban medidas precisas: <em>ro</em> (≈ 15 ml) y <em>deben</em> (91 g).</p>
+        <h3>1. Ungüento oftálmico para el tracoma (Receta Eb. 348)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">👁️ Ungüento para los ojos</p>
+            <ul>
+                <li>Azufre rojo de Nubia molido: <span class="dose-highlight">1/8 de deben</span></li>
+                <li>Miel blanca del delta: <span class="dose-highlight">1/4 de ro</span></li>
+                <li>Ocre amarillo calcinado: <span class="dose-highlight">1/32 de deben</span></li>
+                <li>Grasa de ganso fresca: <span class="dose-highlight">2 ro</span></li>
+            </ul>
+            <p><strong>Preparación:</strong> Pulverizar azufre y ocre juntos. Incorporar miel y batir con la grasa de ganso hasta crema. Guardar en frasco de alabastro sellado.</p>
+            <p><strong>Suministro:</strong> Con el meñique limpio, cantidad del tamaño de un grano de trigo en el ángulo interno del ojo al acostarse. <span class="warning-inline">⚠ Que no caiga directamente sobre la pupila.</span> Usar solo <strong>4 días</strong>.</p>
+        </div>
+        <h3>2. Emplasto para forúnculos (Receta Eb. 108)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🩹 Emplasto para «tumores de pus»</p>
+            <ul>
+                <li>Azufre: <span class="dose-highlight">1 deben</span></li>
+                <li>Natrón rojo del Uadi Natrun: <span class="dose-highlight">1/2 deben</span></li>
+                <li>Incienso molido: <span class="dose-highlight">1/4 de deben</span></li>
+                <li>Orina fermentada de niño: cantidad suficiente para hacer pasta.</li>
+            </ul>
+            <p><strong>Aplicación:</strong> Extender sobre tira de lino, colocar sobre el forúnculo, vendar. Cambiar cada 8 horas. «Abría la cabeza del tumor al tercer día».</p>
+        </div>
+    </section>
+
+    <section class="chapter fade-in-delay-2" id="greciaroma">
+        <span class="culture-badge">🏛️ GRECIA &amp; ROMA</span>
+        <h2>Capítulo 3 — Las prescripciones de Dioscórides y Plinio</h2>
+        <p><strong>Fuentes:</strong> Dioscórides, <em>De Materia Medica</em>, Libro V, cap. 75-76. Plinio el Viejo, <em>Historia Natural</em>, Libro XXXV, cap. 50.</p>
+        <p>Los médicos hipocráticos clasificaban el azufre según su procesado: <em>azufre vivo</em> (nativo), <em>azufre apagado</em> (sublimado) y <em>azufre quemado</em> (más suave).</p>
+        <h3>1. Electuario oral para el asma (según Dioscórides)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🍯 Electuario expectorante</p>
+            <ul>
+                <li><strong>Dosis exacta:</strong> Una <em>triobolon</em> = <span class="dose-highlight">≈ 1.6 g</span> de <strong>azufre apagado</strong>.</li>
+                <li><strong>Vehículo:</strong> Mezclar con <span class="dose-highlight">3 cucharadas</span> de miel ática cruda.</li>
+                <li><strong>Administración:</strong> Lamer lentamente en ayunas durante <strong>3 mañanas consecutivas</strong>, sin beber agua hasta pasada una hora.</li>
+            </ul>
+            <p class="warning-inline">⚠ Advertencia de Dioscórides: «No exceder la dosis, porque corroe el vientre y excita el hipocondrio».</p>
+        </div>
+        <h3>2. «Acopa» sulfurada para dolores articulares (según Plinio)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">💪 Bálsamo para gota fría y reumatismo</p>
+            <ul>
+                <li>Azufre vivo: <span class="dose-highlight">1 onza romana (≈ 27 g)</span></li>
+                <li>Alumbre líquido: <span class="dose-highlight">1/2 onza</span></li>
+                <li>Betún de Judea: <span class="dose-highlight">1 onza</span></li>
+                <li>Aceite de laurel: <span class="dose-highlight">3 onzas</span></li>
+            </ul>
+            <p><strong>Aplicación:</strong> Friccionar la articulación con una moneda de plata hasta enrojecer. Envolver en lana de oveja negra. <strong>2 veces al día.</strong></p>
+        </div>
+        <h3>3. Tratamiento para sarna y tiña (según Celso)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🧼 Ungüento escabicida</p>
+            <ul>
+                <li><strong>Composición:</strong> <span class="dose-highlight">1 parte</span> de azufre + <span class="dose-highlight">1 parte</span> de resina de terebinto + <span class="dose-highlight">3 partes</span> de aceite de mirto.</li>
+                <li><strong>Aplicación:</strong> Untar cuerpo entero (menos la cara) cada noche. Al amanecer, baño en agua de mar. <strong>Duración: 14 días.</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="chapter fade-in-delay-3" id="india">
+        <span class="culture-badge">🕉️ INDIA AYURVÉDICA</span>
+        <h2>Capítulo 4 — La ciencia alquímica del Gandhaka</h2>
+        <p><strong>Fuentes:</strong> <em>Charaka Samhita</em>, Chikitsa Sthana, cap. 7; <em>Rasa Ratna Samuchaya</em> de Vagbhata (siglo XIII).</p>
+        <p>El azufre medicinal indio <strong>no se usa crudo jamás</strong>. La instrucción suprema es el <em>Shodhana</em> (purificación), estandarizado por el sabio alquimista Nagarjuna.</p>
+        <h3>A. Purificación (Shodhana) con leche de vaca</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🥛 Proceso de purificación previo a cualquier uso interno</p>
+            <ol>
+                <li>Tomar Gandhaka (azufre natural). Envolver en paño de algodón formando una bolsa <em>(pottali)</em>.</li>
+                <li>Suspender la bolsa dentro de un recipiente de barro con leche de vaca fresca, completamente sumergida.</li>
+                <li>Hervir a fuego lento durante <strong>3 prahara (≈ 9 horas)</strong>, reponiendo leche según se evapore.</li>
+                <li>Retirar la bolsa. Lavar la masa con agua caliente y decocción de Triphala. Secar al sol.</li>
+            </ol>
+            <p><strong>Resultado:</strong> <em>Shuddha Gandhaka</em> (azufre purificado), apto para uso interno.</p>
+        </div>
+        <h3>B. Suministro oral rejuvenecedor: Gandhaka Rasayana</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">✨ Ciclo de rejuvenecimiento (Rasayana)</p>
+            <ul>
+                <li><strong>Dosis inicial:</strong> <span class="dose-highlight">1 ratti (≈ 125 mg)</span> con <span class="dose-highlight">5 ratti de miel</span> y <span class="dose-highlight">2 ratti de ghee</span> tibios.</li>
+                <li><strong>Escalado (Vardhamana Prayoga):</strong> Aumentar 1 ratti cada día hasta <strong>12 ratti (≈ 1.5 g)</strong>. Luego disminuir 1 ratti cada día. <strong>Ciclo total: 24 días.</strong></li>
+                <li><strong>Dieta estricta (Pathya):</strong> Solo arroz rojo, leche y moong dal. Prohibidas especias picantes, sexo y sol intenso.</li>
+            </ul>
+        </div>
+        <h3>C. Pasta para enfermedades cutáneas severas (Kushtha)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🌿 Pasta de Vanga y Gandhaka</p>
+            <ul>
+                <li><strong>Preparación:</strong> Polvo de Shuddha Gandhaka + Vanga Bhasma en proporción <span class="dose-highlight">2:1</span>. Mezclar con zumo de hojas de neem hasta pasta espesa.</li>
+                <li><strong>Aplicación:</strong> Aplicar sobre placas descamativas, cubrir con hoja de plátano. No mojar en 24 h.</li>
+            </ul>
+        </div>
+        <div class="ancient-quote">Así, la piel se vuelve como el loto y los gusanos mueren en las entrañas.<span class="attribution">— Rasa Ratna Samuchaya, Vagbhata</span></div>
+    </section>
+
+    <section class="chapter fade-in-delay-3" id="china">
+        <span class="culture-badge">🀄 CHINA TRADICIONAL</span>
+        <h2>Capítulo 5 — Las fórmulas calentadoras del Liuhuang</h2>
+        <p><strong>Fuentes:</strong> <em>Shennong Bencao Jing</em> y <em>Bencao Gangmu</em> de Li Shizhen (1578).</p>
+        <div class="ancient-quote">El azufre es la esencia del fuego puro. Si no se doma, abrasa el yin; si se doma, enciende la puerta de la vitalidad.<span class="attribution">— Li Shizhen, Bencao Gangmu</span></div>
+        <h3>A. Purificación con Tofu (Doufu Zhi Liuhuang)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🫘 Proceso de doma del azufre</p>
+            <ol>
+                <li>Cortar tofu blando en cubos con agua en una olla.</li>
+                <li>Envolver trozos de azufre crudo en estopilla y colocarlos entre los cubos de tofu.</li>
+                <li>Cocer a fuego lento durante <strong>12 horas</strong>, reponiendo el agua. El tofu se vuelve negro absorbiendo tóxicos arsenicales.</li>
+                <li>Sacar el azufre, desechar el tofu. Resultado: <strong>Zhì Liú Huáng</strong> (azufre preparado).</li>
+            </ol>
+        </div>
+        <h3>B. Píldoras para disfunción Yang y asma fría: Liuhuang Wan</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">💊 Píldoras calentadoras del Yang</p>
+            <ul>
+                <li>Zhì Liú Huáng: <span class="dose-highlight">4 liang (≈ 120 g)</span></li>
+                <li>Harina de semilla de cuscuta (tu si zi): <span class="dose-highlight">2 liang</span></li>
+                <li>Polvo de riñón de cerdo seco: <span class="dose-highlight">1 par</span></li>
+            </ul>
+            <p><strong>Suministro exacto:</strong> De <span class="dose-highlight">10 a 30 píldoras</span> por dosis con agua tibia de jengibre. <strong>Dosis máxima diaria: 60 píldoras.</strong></p>
+        </div>
+        <h3>C. Inhalación de emergencia por síncope</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">💨 Reanimación por estornudo</p>
+            <ul>
+                <li><strong>Polvo:</strong> <span class="dose-highlight">1 qian (3.7 g)</span> de azufre + <span class="dose-highlight">2 qian</span> de escama de pangolín quemada.</li>
+                <li><strong>Uso:</strong> Echar una punta de cuchillo sobre brasas de sándalo rojo. Acercar la nariz del paciente al humo. El estornudo violento «devuelve el alma al pecho». Usar solo una vez y ventilar.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="chapter fade-in-delay-3" id="america">
+        <span class="culture-badge">🏔️ MESOAMÉRICA &amp; ANDES</span>
+        <h2>Capítulo 6 — Los emplastos volcánicos del Copah</h2>
+        <p><strong>Fuentes:</strong> Sahagún, <em>Historia general de las cosas de Nueva España</em> (Códice Florentino); Inca Garcilaso de la Vega, <em>Comentarios Reales</em>.</p>
+        <h3>1. Emplasto mexica para huesos quebrados</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🦴 Férula natural del Ticitl</p>
+            <ul>
+                <li><strong>Fórmula:</strong> Copah molido + Ocuiltzotl (resina de pino liquidámbar) derretida + Claras de huevo de guajolote.</li>
+                <li><strong>Técnica:</strong> Mezclar hasta pasta espesa. Verter sobre la fractura alineada. Se endurece formando una férula natural con acción antiséptica del azufre.</li>
+            </ul>
+        </div>
+        <h3>2. Vapor de Temazcalli para dolores de nervios</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🔥 Baño de vapor curativo</p>
+            <ul>
+                <li><strong>Técnica:</strong> Sobre piedras calentadas al rojo vivo, espolvorear un puñado de azufre molido + hojas de tabaco silvestre picadas.</li>
+                <li><strong>Suministro:</strong> Paciente acostado en petate recibe vapor sulfuroso durante <strong>≈ 10-15 min</strong>. Inmediatamente después, sumersión en agua fría.</li>
+            </ul>
+        </div>
+        <h3>3. Cataplasma inca para la uta (leishmaniasis cutánea)</h3>
+        <div class="recipe-card">
+            <p class="recipe-title">🏵️ Cataplasma andino</p>
+            <ul>
+                <li><strong>Fórmula:</strong> Pulpa de raíz de rata-rata cocida + azufre de los volcanes + orina fermentada de llama.</li>
+                <li><strong>Aplicación:</strong> Bolo grueso sobre la úlcera, cubriendo con hoja de achira. Cambiar <strong>2 veces al día</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="chapter fade-in-delay-3" id="tabla">
+        <span class="culture-badge">📊 APÉNDICE TÉCNICO</span>
+        <h2>Medidas universales en la historia del azufre</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cultura</th>
+                        <th>Dosis oral estándar</th>
+                        <th>Medida mezcla tópica</th>
+                        <th>Vehículo preferido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Grecia</strong></td><td>1 triobolon (≈ 1.6 g) de azufre apagado</td><td>Partes con aceite</td><td>Miel ática</td></tr>
+                    <tr><td><strong>India</strong></td><td>1 ratti (125 mg) hasta 1.5 g en ciclo</td><td>2:1 con metales calcinados</td><td>Ghee y miel</td></tr>
+                    <tr><td><strong>China</strong></td><td>10-60 píldoras (≈ 50 mg c/u de azufre)</td><td>Polvo mezclado con vinagre</td><td>Agua de jengibre</td></tr>
+                    <tr><td><strong>Egipto</strong></td><td>Sin uso oral sistemático documentado</td><td>1/8 deben (≈ 11 g) por aplicación</td><td>Grasa de ganso</td></tr>
+                    <tr><td><strong>Roma</strong></td><td>1 óbolo (≈ 0.6 g) en electuario</td><td>1 onza por 3 de aceite</td><td>Aceite de mirto</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="chapter fade-in-delay-3" id="metodos">
+        <span class="culture-badge">⚗️ APÉNDICE TÉCNICO</span>
+        <h2>Métodos de purificación del azufre para volverlo «medicinal»</h2>
+        <div class="method-grid">
+            <div class="method-card">
+                <div class="method-number">1</div>
+                <h4>Greco-romano (por cocción)</h4>
+                <p>Calentar azufre en recipiente cerrado; la parte sublimada que se adhiere a la tapa es el <strong>«azufre apagado»</strong>. Considerado menos corrosivo para uso interno.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-number">2</div>
+                <h4>Indio (ebullición en leche)</h4>
+                <p>Disolución en leche caliente para eliminar impurezas y reducir toxicidad aguda, formando un complejo orgánico.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-number">3</div>
+                <h4>Chino (con tofu)</h4>
+                <p>Co-digestión prolongada con proteína de soja para quelar arsénico y otros metales, basado en la afinidad del azufre por las proteínas.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-number">4</div>
+                <h4>Andino (natural)</h4>
+                <p>Selección de los cristales más puros y transparentes de las fumarolas, desechando los grises o terrosos; simple molienda a la sombra.</p>
+            </div>
+        </div>
+        <div class="ancient-quote" style="margin-top: 25px;">
+            Esta convergencia de técnicas, nacidas de la observación milenaria, demuestra que la humanidad ancestral comprendió la dualidad del azufre: destructor de parásitos y constructor de colágeno, demonio del fuego y divinidad de la piel. Los sabios nos dejaron las llaves; depende de nosotros abrir con respeto la puerta.
+        </div>
+    </section>
+
+</div>
+
+<footer class="site-footer">
+    <span class="footer-icon">🜂</span>
+    <p>MANUAL TÉCNICO DEL AZUFRE MEDICINAL — Digitalización del compendio histórico</p>
+    <p style="font-size:0.8rem; margin-top:6px;">
+        Fuentes originales: Papiro de Ebers · Dioscórides <em>De Materia Medica</em> · Plinio <em>Historia Natural</em> ·
+        Charaka Samhita · Bencao Gangmu · Códice Florentino<br>
+        © Reconstrucción con fines de estudio antropológico y farmacognóstico.
+    </p>
+</footer>
+
+<a href="#top" class="back-to-top" title="Volver arriba">⬆</a>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+    const sections = document.querySelectorAll('section[id]');
+    const navLinksAll = document.querySelectorAll('.nav-links a');
+    function updateActiveLink() {
+        let currentId = '';
+        sections.forEach(section => { if (window.scrollY >= section.offsetTop - 120) currentId = section.getAttribute('id'); });
+        navLinksAll.forEach(link => { link.classList.remove('active-link'); if (link.getAttribute('href') === '#' + currentId) link.classList.add('active-link'); });
+    }
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
+    const backToTopBtn = document.querySelector('.back-to-top');
+    backToTopBtn.style.transition = 'opacity 0.3s';
+    backToTopBtn.style.opacity = '0';
+    backToTopBtn.style.pointerEvents = 'none';
+    window.addEventListener('scroll', () => {
+        backToTopBtn.style.opacity = window.scrollY > 600 ? '1' : '0';
+        backToTopBtn.style.pointerEvents = window.scrollY > 600 ? 'auto' : 'none';
+    });
+</script>
+</body>
+</html>
